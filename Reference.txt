@@ -1,0 +1,94 @@
+
+Calc 
+--
+  Source Doc: FRD
+  ---
+
+  Dev
+  ---
+    function add(a: number, b: number): number{
+      return a + b;
+    }
+
+    add(10, 20); // 30
+    add(5, 5); // 10
+
+    Refer: Test Cases (Requirements)
+    ----  
+      1. Inputs should be numbers 
+      2. Output should also be number 
+      3. If invalid inputs entered add button should be disabled 
+
+ 
+Dev => QA => (bugs) => Dev => QA => (bugs) =>Dev => QA => (bugs) => Dev => QA => (QA Passed) => Deployment 
+
+Dev Methodology 
+---
+  Test Driven Development or Behavior Driven Development 
+  ---
+    Dev write Test cases => Dev write functionality => (Tools) => Instant Feedback of Success/Failure 
+
+=====
+
+
+Automated Testing
+---
+  0. Static Type Checking 
+      Tools: TypeScript / FlowJS / PropTypes 
+
+  1. Unit Testing 
+      * Testing small unit of a component 
+      * Individual units/components are tested 
+      * Bug Reduction Density => 40% - 80% 
+
+      Tools: JEST (Framework + Test Runner) &  React Testing Library (has set of helpers for DOM tree testing)
+
+  2. Integration Testing 
+      * different unit, modules or components are tested as combined entity 
+      * Behaviour of the app would be tested 
+      * to expose issues in the integration between multiple units 
+      * Usually done with mounting or redering a component 
+      * Examples: test if a child comp can update context state in a parent comp 
+
+      Tools: JEST & React Testing Library vs JEST & Enzyme (jquery like tool -- for dom traversal)
+
+  3. End to End Testing  (E2E )
+      * Testing the whole app 
+      * Usaully a multi step test combining multiple units and integration tests into on big test 
+      * Usaully mocked or stubbed very little
+      * Tests are done in a simulated browser, there may or may not be an UI while the test is running 
+      * Example: testing an authentication flow 
+
+      Tools: CypressJS, Pratractor, Selenium,  
+
+
+// How to write Test cases?
+// Where to write Test cases?
+// How to test our app against the test cases we identified? 
+
+
+Software Development Methodologies / Testing Approach 
+---
+  1. TDD (Test Driven Development) 
+      * is a programming practice that instructs dev's to write new code only if an automated test has failed 
+
+      dev writes test case => (instant feedback of failure) => dev should do the coding to fix the bug => (instant feedback of success) => [CODE COMPLETE]
+
+      * Tool: JEST
+
+  2. BDD (Behavior Driven Development )
+      * is an agile so/w dev Methodology in which an application documented and designed 
+        around the behaviour the user expects to experience when interacting it 
+      * Tool: JasmineJS
+    
+      dev writes test case => (instant feedback of failure) => dev should do the coding to fix the bug => (instant feedback of success) => [CODE COMPLETE]
+
+=====
+
+Testing Pattern
+--------
+  AAA (Arrange, Act, Assert)
+  Given/When/Then
+
+--------
+
