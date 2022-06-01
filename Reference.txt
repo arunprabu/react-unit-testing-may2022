@@ -1,3 +1,30 @@
+Refresher Session Unit Testing TOC:
+
+React 
+  Jest & Jest DOM
+  Assertions, act(), mocking, simulate (Event)
+  Using spy()
+  Component Testing - Introduction to Enzyme (HackerRank seem to use Enzyme)
+  React Testing Library
+  Comparison between React Testing Lib and Enzyme
+  Testing components within Providers
+  Testing hooks
+  Testing Service API calls.
+ 
+====
+  
+  Testing Component 
+    * props 
+    * state 
+    * events (simulate)
+    * JSX 
+
+  Testing Component + API  
+    * mocks 
+
+------
+
+
 
 Calc 
 --
@@ -75,20 +102,35 @@ Software Development Methodologies / Testing Approach
       dev writes test case => (instant feedback of failure) => dev should do the coding to fix the bug => (instant feedback of success) => [CODE COMPLETE]
 
       * Tool: JEST
+      * Testing Pattern: AAA (Arrange, Act, Assert)
 
   2. BDD (Behavior Driven Development )
       * is an agile so/w dev Methodology in which an application documented and designed 
         around the behaviour the user expects to experience when interacting it 
       * Tool: JasmineJS
+      * Testing Pattern: Given/When/Then
     
       dev writes test case => (instant feedback of failure) => dev should do the coding to fix the bug => (instant feedback of success) => [CODE COMPLETE]
 
 =====
+NPM Dependencies
+--
+  1. Project Dep (dependencies)
+      * packages needed for the project to work after deployment 
+      * will always be part of prod build 
 
-Testing Pattern
---------
-  AAA (Arrange, Act, Assert)
-  Given/When/Then
+      examples: dropzone, jquery, datatables, bootstrap, react, react-dom 
 
---------
+  2. Dev Dependencies (devDependencies)
+      * packages needed during the time of Development 
+      * packages not needed for the project to work after deployment 
+      * will never be part of prod build 
+      * to have better, smoother dev workflow 
 
+      examples: webpack, jest, react-testing-library, enzyme, typescript, 
+                karma, jasmine, nodemon 
+    
+  3. Global Dependencies 
+---
+
+npm run eject 
