@@ -1,7 +1,7 @@
 // TEST PATTERN: AAA
 import About, { add } from './About';
 
-describe('About Component', () => { 
+xdescribe('About Component', () => { 
 
   it('should be available with in app', () => {
     expect(About).toBeDefined();
