@@ -1,8 +1,17 @@
 import './App.css';
 import About from './Components/About/About';
 import Company from './Components/Company/Company';
+import Counter from './Components/Counter/Counter';
+import ThemeSwitcher from './Components/ThemeSwitcher/ThemeSwitcher';
+import Movies from './Containers/Movies';
 
 function App() {
+
+  let movieInfo = {
+    id: 12321,
+    url: 'http://www.imdb.com',
+    movieName: 'Jurassic Park'
+  }
 
   return (
     <div className="App">
@@ -13,6 +22,15 @@ function App() {
 
       <hr/>
       <Company name="Cognizant Tech" />
+
+      <hr/>
+      <Counter/>
+
+      <hr/>
+      <Movies {...movieInfo}/>
+
+      <hr/>
+      <ThemeSwitcher/>
     </div>
   );
 }

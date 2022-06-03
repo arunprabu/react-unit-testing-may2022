@@ -1,5 +1,6 @@
 import Company from './Company';
 import { render, screen, fireEvent } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 
 describe('Company Component', () => { 
 
@@ -39,22 +40,37 @@ describe('Company Component', () => {
   });
 
   // Test Spec #6
+  it('has css class card', () => {
+    render(<Company />);
+    expect(screen.getByRole('button')).toHaveClass('btn');
+  });
+
+  // Test Spec #7
   it(`has an element with placeholder 'Enter Country'`, () => {
     render(<Company />);
     const countryInput = screen.getByPlaceholderText('Enter Country');
     expect(countryInput).toBeTruthy();
   });
 
-  // Test #7 - checking if the input element works with onChange event 
+  // Test #8 - checking if the input element works with onChange event 
   it('should update country on onChange event', () => {
     render(<Company />);
     // find an element with placeholder Enter Country
     const countryInput = screen.getByPlaceholderText('Enter Country');
     // now checking if onChange is working or not
-    // mock fire change event with the mock value 
+    // mock fire change event with the mock value
     fireEvent.change(countryInput, { target: { value: 'Canada'} });
     // finally checking if the input element is showing the right country
     expect(countryInput.value).toBe('Canada');
   });
+
+  // Snapshot Testing 
+  it('should have right company snapshot', () => {
+    // to take snapshot we need a tool 'react-test-renderer' -- npm i react-test-renderer
+    const snapshotTree = renderer.create(<Company name='Cognizant Technologies Pvt Ltd'/>).toJSON();
+    //console.log(snapshotTree);
+    expect(snapshotTree).toMatchSnapshot();
+  });
+  
 
 });
