@@ -3,7 +3,8 @@ import userEvent from "@testing-library/user-event";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 import { shallow } from 'enzyme';
-// For Enzyme Adapter Setup - Refer setupTests.js file and restart your test
+// For Enzyme Adapter Setup - Refer setupTests.js file 
+// and then restart your test by typing 'npm run test'
 
 it('has toggling theme button', () => {
   render(<ThemeSwitcher />);
