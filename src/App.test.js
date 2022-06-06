@@ -6,7 +6,7 @@ import { render, screen } from '@testing-library/react';
 import App from './App';  // Taking up the comp testing 
 
 // group of related test spec/cases -- Test Suite
-xdescribe( 'App Component', () => {
+describe( 'App Component', () => {
 
   // test spec / test case 
   test('should have Welcome text', () => {

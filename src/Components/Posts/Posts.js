@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 
 const Posts = () => {
   
-  const [posts, setPosts] = useState([]);
+  const [postList, setPostList] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts?_limit=3")
+    fetch("https://jsonplaceholder.typicode.com/posts?_limit=4")
       .then((response) => {
         if (response.status === 200 || response.ok) {
           return response.json();
@@ -14,15 +14,28 @@ const Posts = () => {
         }
       })
       .then((jsonData) => {
-        setPosts(jsonData);
+        setPostList(jsonData);
       });
   }, []);
 
-
   return (
-    <div>
-      <h2>Posts</h2>
-      
+    <div style={{textAlign: 'left', padding: '20px'}}>
+      <h2 data-testid='h2El'>Posts</h2>
+      <select role='combobox'>
+        <option>Select</option>
+        <option>Sort By Post Id</option>
+        <option>Sort By Date</option>
+      </select>
+      {
+        postList.map( (post )=> {
+          return(
+            <div role="listitem" style={{backgroundColor: 'lightyellow'}} key={post.id}>
+              <span>#{post.id}</span>
+              <h3>{post.title}</h3>
+            </div>
+          )
+        })
+      }
     </div>
   )
 }

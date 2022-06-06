@@ -2,6 +2,7 @@ import './App.css';
 import About from './Components/About/About';
 import Company from './Components/Company/Company';
 import Counter from './Components/Counter/Counter';
+import Posts from './Components/Posts/Posts';
 import ThemeSwitcher from './Components/ThemeSwitcher/ThemeSwitcher';
 import Todos from './Components/Todos/Todos';
 import Greet from './Components/Users/MockingCompDemo/Greet';
@@ -42,7 +43,12 @@ function App() {
       <Users/>
 
       <hr/>
+      <Posts />
+
+      <hr/>
       <Greet />
+
+      
     </div>
   );
 }
