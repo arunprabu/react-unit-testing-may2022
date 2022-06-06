@@ -21,8 +21,8 @@ const ThemeSwitcher = () => {
 
   return (
     <div style={theme === 'light'? myTheme.dark: myTheme.light}>
-      <h2>ThemeSwitcher | User Generated Event</h2>
-      <p>Current Theme: {theme}</p>
+      <h2>ThemeSwitcher | User Generated Event and Enzyme</h2>
+      <p className="icon-star">Current Theme: {theme}</p>
       <button onClick={handleToggleTheme}>Switch Theme</button>
     </div>
   )

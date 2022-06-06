@@ -4,6 +4,21 @@ import renderer from 'react-test-renderer';
 
 describe('Company Component', () => { 
 
+  //let container = null;
+  // Setup 
+//   beforeEach( () => {
+//     // render(<Company />, document.body);
+//     container = document.createElement(<Company />);
+//     document.body.appendChild(container);
+//   })
+
+//  // setting up mocks in BeforeAll 
+
+//   // Tear Down , 
+//   afterEach( () => {
+
+//   })
+
   // Test spec #1 
   it('should be available with in app', () => {
     expect(Company).toBeDefined();
@@ -66,11 +81,12 @@ describe('Company Component', () => {
 
   // Snapshot Testing 
   it('should have right company snapshot', () => {
-    // to take snapshot we need a tool 'react-test-renderer' -- npm i react-test-renderer
-    const snapshotTree = renderer.create(<Company name='Cognizant Technologies Pvt Ltd'/>).toJSON();
-    //console.log(snapshotTree);
-    expect(snapshotTree).toMatchSnapshot();
-  });
-  
+    // to take a snapshot we need a tool - react-test-renderer (npm i react-test-renderer)
+    // taking a snapshot and converting it into json
+    // [RECOMMENDED]: Take snapshot with necessary props as well.
+    const snapshotJSON = renderer.create(<Company name="Cognizant Tech" />).toJSON();
+    // let's assert with a matcher toMatchSnapshot() from jest 
+    expect(snapshotJSON).toMatchSnapshot();
+  });  
 
 });

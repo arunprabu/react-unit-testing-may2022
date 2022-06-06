@@ -17,7 +17,7 @@ const Company = (props) => {
       <div data-testid="employeesCountEl" 
         style={{padding: '10px', 
       color: 'green'}}>
-        Employees: 318,000+
+        Employees: 318000+
       </div>
 
       {/* TODO: Have JOIN NOW button for Test Spec #5*/}

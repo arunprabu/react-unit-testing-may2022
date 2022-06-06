@@ -3,6 +3,9 @@ import About from './Components/About/About';
 import Company from './Components/Company/Company';
 import Counter from './Components/Counter/Counter';
 import ThemeSwitcher from './Components/ThemeSwitcher/ThemeSwitcher';
+import Todos from './Components/Todos/Todos';
+import Greet from './Components/Users/MockingCompDemo/Greet';
+import Users from './Components/Users/Users';
 import Movies from './Containers/Movies';
 
 function App() {
@@ -31,6 +34,15 @@ function App() {
 
       <hr/>
       <ThemeSwitcher/>
+
+      <hr/>
+      <Todos/>
+
+      <hr/>
+      <Users/>
+
+      <hr/>
+      <Greet />
     </div>
   );
 }

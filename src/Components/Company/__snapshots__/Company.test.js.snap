@@ -11,7 +11,7 @@ exports[`Company Component should have right company snapshot 1`] = `
   <p
     data-testid="companyNameEl"
   >
-    Cognizant Technologies Pvt Ltd
+    Cognizant Tech
   </p>
   <div
     data-testid="employeesCountEl"
@@ -22,7 +22,7 @@ exports[`Company Component should have right company snapshot 1`] = `
       }
     }
   >
-    Employees: 318,000+
+    Employees: 318000+
   </div>
   <button
     className="btn btn-primary"
