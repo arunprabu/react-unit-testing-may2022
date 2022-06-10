@@ -30,9 +30,7 @@ it('div tag should have h2 as inner element', () => {
 
 it('h2 should have ThemeSwitcher text', () => {
   const wrapper = shallow(<ThemeSwitcher />);
-  // The following line children is not an error. you can disable eslint
   expect(wrapper.find('h2')
-    .children()
     .contains('ThemeSwitcher | User Generated Event and Enzyme'))
     .toEqual(true);
 

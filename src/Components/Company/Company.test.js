@@ -45,6 +45,7 @@ describe('Company Component', () => {
     render(<Company />);
     expect(screen.getByTestId('employeesCountEl')).toHaveStyle('color: green');
   });   
+  
 
   // Test Spec #5
   // TODO: test whether the el has css class btn.
